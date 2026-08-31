@@ -7,7 +7,7 @@ game made with godot and gdscript with slimes, apples and different tiles!!
 # development
 1.) clone this repo
 ```sh
-git clone [https://github.com/https://github.com/https://github.com/evacoffee/actionator.git](https://github.com/evacoffee/actionator.git)
+git clone https://github.com/https://github.com/evacoffee/actionator.git
 ```
 
 
