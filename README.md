@@ -17,7 +17,7 @@ git clone https://github.com/https://github.com/evacoffee/actionator.git
 3.) click import and select the project.godot file inside the downloaded project
 
 
-4.) one project opens press f5 to run game
+4.) once project opens press f5 to run game
 
 
 
