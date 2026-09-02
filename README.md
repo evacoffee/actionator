@@ -1,7 +1,7 @@
 # actionator
 a godot game of killing slimes and collecting apples but when you die you go back to level 1, how far can you go?
 
-<img width="3785" height="2150" alt="PXL_20260901_120059133" src="https://github.com/user-attachments/assets/1af0912e-ce3b-43ed-bc74-430fe8c97fdf" />
+<img width="3813" height="2175" alt="PXL_20260902_153042274" src="https://github.com/user-attachments/assets/1b54e23c-6b4d-44cd-9913-2d7e573d0c76" />
 
 game made with godot and gdscript with slimes, apples and different tiles!!
 
