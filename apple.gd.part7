@@ -1,3 +1,0 @@
-_looped() -> void:
-	if animated_sprite_2d.animation == "collected":
-		queue_free()
