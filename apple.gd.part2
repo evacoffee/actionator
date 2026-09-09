@@ -1,0 +1,2 @@
+onready var collected_sound: AudioStreamPlayer2D = $collectedsound
+@onready var collisi

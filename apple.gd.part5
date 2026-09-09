@@ -1,0 +1,5 @@
+d.play()
+	collected.emit()
+	call_deferred("_disable_collision")
+
+func _disable_collisio

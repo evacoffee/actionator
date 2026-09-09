@@ -1,0 +1,5 @@
+on_shape_2d: CollisionShape2D = $CollisionShape2D
+
+signal collected
+
+func _on_body_ente
