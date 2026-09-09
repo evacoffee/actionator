@@ -1,3 +1,0 @@
-red(_body: Node2D) -> void:
-	animated_sprite_2d.animation = "collected"
-	collected_soun
