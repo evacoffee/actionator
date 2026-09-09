@@ -1,4 +1,0 @@
-n() -> void:
-	collision_shape_2d.disabled = true
-
-func _on_animated_sprite_2d_animation
