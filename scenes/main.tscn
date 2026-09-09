@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://k5em2alj1pyn"]
+
+[ext_resource type="Script" uid="uid://cyyw64rxt271t" path="res://scripts/main.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://c2eikj15l4h03" path="res://scenes/levels/base_level.tscn" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://dllv32jqj8ygh" path="res://scenes/hud.tscn" id="3_sugp2"]
+[ext_resource type="AudioStream" uid="uid://co0os7t7suiy2" path="res://assets/audio/music.wav" id="4_jyhfs"]
+[ext_resource type="FontFile" uid="uid://c5qp25frs3t36" path="res://assets/font/Abaddon Bold.ttf" id="5_tbgi4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1iy0d"]
+bg_color = Color(0.1620912, 0.33314657, 0.6425328, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 5
+
+[node name="main" type="Node2D" unique_id=1629060965]
+script = ExtResource("1_0wfyh")
+
+[node name="levelroot" parent="." unique_id=1768391407 instance=ExtResource("1_sugp2")]
+position = Vector2(1, 1)
+
+[node name="HUD" parent="." unique_id=1227771645 instance=ExtResource("3_sugp2")]
+
+[node name="scoreHUD" type="CanvasLayer" parent="." unique_id=1962162734]
+
+[node name="scorepanel" type="Panel" parent="scoreHUD" unique_id=1941160386]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 20.0
+offset_right = 80.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1iy0d")
+
+[node name="scorelabel" type="Label" parent="scoreHUD/scorepanel" unique_id=212919018]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -14.0
+offset_right = 58.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_tbgi4")
+theme_override_font_sizes/font_size = 32
+text = "APPLES: 0"
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=854395588]
+stream = ExtResource("4_jyhfs")
+volume_db = -6.118
+autoplay = true

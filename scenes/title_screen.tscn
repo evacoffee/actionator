@@ -1,0 +1,265 @@
+[gd_scene format=3 uid="uid://cjmee5ww7m55b"]
+
+[ext_resource type="FontFile" uid="uid://c5qp25frs3t36" path="res://assets/font/Abaddon Bold.ttf" id="1_fgkus"]
+[ext_resource type="Script" uid="uid://c1bbo8ibw08wm" path="res://scripts/title_screen.gd" id="1_sa3yf"]
+[ext_resource type="AudioStream" uid="uid://dvoxv6onaq3yh" path="res://assets/audio/title_screen_music.wav" id="2_e54dn"]
+[ext_resource type="Texture2D" uid="uid://bqmyclvjqklq7" path="res://assets/images/background/pixel_grass.png" id="2_mgrm8"]
+[ext_resource type="SpriteFrames" uid="uid://xjr5eue1d8qk" path="res://assets/characters/slime.tres" id="3_mgrm8"]
+[ext_resource type="Script" uid="uid://j12t58coviiq" path="res://scripts/titleslime.gd" id="4_dc4i4"]
+
+[node name="title_screen" type="Node2D" unique_id=2061294590]
+script = ExtResource("1_sa3yf")
+
+[node name="bg music" type="AudioStreamPlayer" parent="." unique_id=611651551]
+stream = ExtResource("2_e54dn")
+autoplay = true
+
+[node name="grassbackground" type="TextureRect" parent="." unique_id=1931358535]
+z_index = -10
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 721.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mgrm8")
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="fadeoverlay" type="ColorRect" parent="." unique_id=1172750953]
+offset_right = 1281.0
+offset_bottom = 722.0
+color = Color(0, 0, 0, 0)
+
+[node name="titleslime" type="AnimatedSprite2D" parent="." unique_id=1014580772]
+position = Vector2(170, 361)
+scale = Vector2(6, 6)
+sprite_frames = ExtResource("3_mgrm8")
+animation = &"idle"
+script = ExtResource("4_dc4i4")
+
+[node name="title_label" type="Label" parent="." unique_id=357980710]
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 229.0
+offset_top = 102.0
+offset_right = 1017.0
+offset_bottom = 272.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 150
+text = "ACTIONATOR"
+
+[node name="byme_label" type="Label" parent="." unique_id=1204306812]
+offset_left = 889.0
+offset_top = 241.0
+offset_right = 1014.0
+offset_bottom = 286.0
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 40
+text = "by: eva"
+
+[node name="prompt_label" type="Label" parent="." unique_id=1606249929]
+z_index = 1
+offset_left = 405.0
+offset_top = 516.0
+offset_right = 852.0
+offset_bottom = 573.0
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 50
+text = "press space to start"
+
+[node name="controls_button" type="Button" parent="." unique_id=288791833]
+anchors_preset = -1
+offset_left = -1.0
+offset_top = 668.0
+offset_right = 142.0
+offset_bottom = 721.0
+theme_override_colors/font_color = Color(0.989873, 0.9720791, 0.77190095, 1)
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 40
+text = "controls"
+
+[node name="controls_panel" type="Panel" parent="." unique_id=667403315]
+visible = false
+z_index = 10
+anchors_preset = -1
+offset_left = 435.0
+offset_top = 185.0
+offset_right = 835.0
+offset_bottom = 585.0
+
+[node name="controls_label" type="Label" parent="controls_panel" unique_id=277746946]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 47.0
+offset_right = 340.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0.9882353, 0.972549, 0.77254903, 1)
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 20
+text = "wasd, space to swing sword, 
+longer space for double attack 
+and left shift to dash 
++ get hearts after killing slimes
+ to top of health 
++ and collect apples to increase
+ score & health 
++ chest for upgrades!
+also escape for pause menu"
+
+[node name="close_button" type="Button" parent="controls_panel" unique_id=1596008040]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 293.0
+offset_right = 229.0
+offset_bottom = 336.0
+theme_override_colors/font_color = Color(0.66784734, 0.5376458, 0.06305272, 1)
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 30
+text = "close"
+
+[node name="credits_button" type="Button" parent="." unique_id=1034613965]
+offset_left = 1159.0
+offset_top = 668.0
+offset_right = 1280.0
+offset_bottom = 721.0
+theme_override_colors/font_color = Color(0.9882353, 0.972549, 0.77254903, 1)
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 40
+text = "credits"
+
+[node name="credits_panel" type="Panel" parent="." unique_id=561918124]
+visible = false
+offset_left = 528.0
+offset_top = 269.0
+offset_right = 728.0
+offset_bottom = 469.0
+
+[node name="credits_label" type="Label" parent="credits_panel" unique_id=895450763]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 35.0
+offset_right = 178.0
+offset_bottom = 136.0
+theme_override_colors/font_color = Color(0.9882353, 0.972549, 0.77254903, 1)
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 20
+text = "thank you to 
+Coding with Russ 
+for the a
+maing tutorial!!"
+
+[node name="creditsclose_button" type="Button" parent="credits_panel" unique_id=1598879171]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 157.0
+offset_right = 127.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0.6666667, 0.5372549, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 20
+text = "close"
+
+[node name="achievements_button" type="Button" parent="." unique_id=1163265933]
+offset_right = 161.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0.9882353, 0.972549, 0.77254903, 1)
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 40
+text = "achievements"
+
+[node name="achievements_panel" type="Panel" parent="." unique_id=439205758]
+visible = false
+z_index = 10
+anchors_preset = -1
+offset_left = 439.0
+offset_top = 163.0
+offset_right = 839.0
+offset_bottom = 563.0
+
+[node name="achievements_label" type="Label" parent="achievements_panel" unique_id=539634622]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 55.0
+offset_right = 336.0
+offset_bottom = 286.0
+theme_override_colors/font_color = Color(0.9882353, 0.972549, 0.77254903, 1)
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 20
+text = "apple collector: collect 20 apples
+
+slime slayer: defeat 25 slimes
+
+survivor: reach level 10
+
+treasure hunter: open 5 chests
+
+unstopable: reach level 15"
+
+[node name="achievementsclose_button" type="Button" parent="achievements_panel" unique_id=356809495]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 328.0
+offset_right = 233.0
+offset_bottom = 371.0
+theme_override_colors/font_color = Color(0.6666667, 0.5372549, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 30
+text = "close"
+
+[node name="best_run_button" type="Button" parent="." unique_id=2017475260]
+offset_left = 1126.0
+offset_right = 1280.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0.9882353, 0.972549, 0.77254903, 1)
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 40
+text = "best run"
+
+[node name="best_run_panel" type="Panel" parent="." unique_id=1686498099]
+visible = false
+anchors_preset = -1
+offset_left = 471.0
+offset_top = 220.0
+offset_right = 771.0
+offset_bottom = 520.0
+
+[node name="best_run_label" type="Label" parent="best_run_panel" unique_id=437095096]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 51.0
+offset_right = 252.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0.9882353, 0.972549, 0.77254903, 1)
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 45
+text = "BEST RUN
+LEVEL: 1
+TIME: 00.00"
+
+[node name="bestrun_close_button" type="Button" parent="best_run_panel" unique_id=309304260]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 251.0
+offset_right = 188.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(0.6666667, 0.5372549, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("1_fgkus")
+theme_override_font_sizes/font_size = 25
+text = "close"
+
+[connection signal="pressed" from="controls_button" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="controls_panel/close_button" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="credits_button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="credits_panel/creditsclose_button" to="." method="_on_creditsclose_button_pressed"]
+[connection signal="pressed" from="achievements_button" to="." method="_on_achievements_button_pressed"]
+[connection signal="pressed" from="achievements_panel/achievementsclose_button" to="." method="_on_achievementsclose_button_pressed"]
+[connection signal="pressed" from="best_run_button" to="." method="_on_best_run_button_pressed"]
+[connection signal="pressed" from="best_run_panel/bestrun_close_button" to="." method="_on_bestrun_close_button_pressed"]

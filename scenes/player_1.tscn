@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cpwaexrdiryg0"]
+
+[ext_resource type="Script" uid="uid://b438kmxv3u5mf" path="res://scripts/player_1.gd" id="1_gneq0"]
+[ext_resource type="SpriteFrames" uid="uid://pkjrcq18irms" path="res://assets/characters/knight_frames.tres" id="2_vod78"]
+[ext_resource type="AudioStream" uid="uid://cffsyi5kupki7" path="res://assets/audio/whoosh.wav" id="3_f7tsm"]
+[ext_resource type="AudioStream" uid="uid://cxskjkdode75k" path="res://assets/audio/player_damage.wav" id="4_vod78"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3qjg"]
+size = Vector2(10.25, 9.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1iy0d"]
+size = Vector2(13.8, 19.75)
+
+[node name="player1" type="CharacterBody2D" unique_id=2137238283 groups=["player1"]]
+scale = Vector2(5, 5)
+script = ExtResource("1_gneq0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=247376152]
+sprite_frames = ExtResource("2_vod78")
+animation = &"attack_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=458417742]
+position = Vector2(-0.625, 3.875)
+shape = SubResource("RectangleShape2D_f3qjg")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=2058849734]
+position = Vector2(7.5, -0.5)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=2104888514]
+position = Vector2(-0.5999999, -0.6249999)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_1iy0d")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1179511209]
+limit_left = 0
+limit_top = 0
+limit_right = 3136
+limit_bottom = 2304
+
+[node name="SwingSword" type="AudioStreamPlayer2D" parent="." unique_id=1954797201]
+stream = ExtResource("3_f7tsm")
+pitch_scale = 3.0
+
+[node name="DamageCooldown" type="Timer" parent="." unique_id=2125810815]
+one_shot = true
+
+[node name="TakeDamage" type="AudioStreamPlayer2D" parent="." unique_id=619271341]
+stream = ExtResource("4_vod78")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
