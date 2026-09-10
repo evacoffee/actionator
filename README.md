@@ -1,6 +1,8 @@
 # actionator
 a godot game of killing slimes and collecting apples but when you die you go back to level 1, how far can you go?
 
+play here!! https://evmaagca.itch.io/actionatior
+
 <img width="3620" height="1934" alt="PXL_20260903_235135076" src="https://github.com/user-attachments/assets/efc56b00-b649-4724-9ec1-38c3d1a392f0" />
 
 
