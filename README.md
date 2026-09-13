@@ -22,10 +22,10 @@ game made with godot and gdscript with slimes, apples and different tiles!! I ma
 - best run system that records your farthest level and fastest time
 
 # controls
-WASD - move
-space - attack
-shift - dash
-esc - pause
+WASD - move / 
+space - attack / 
+shift - dash / 
+esc - pause / 
 
 # development
 1.) clone this repo
