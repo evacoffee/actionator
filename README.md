@@ -10,6 +10,7 @@ game made with godot and gdscript with slimes, apples and different tiles!! I ma
 
 # features
 - 15 levels that get progressively harder
+- titlescreen buttons for credits, controls, acheivements etc
 - sword combat with normal and charged attacks
 - dash ability with stamina cost and temporary invincibility
 - combo system for defeating enemies quickly
@@ -25,7 +26,7 @@ game made with godot and gdscript with slimes, apples and different tiles!! I ma
 WASD - move / 
 space - attack / 
 shift - dash / 
-esc - pause / 
+esc - pause
 
 # development
 1.) clone this repo
