@@ -59,6 +59,9 @@ func _ready() -> void:
 		camera.enabled = true
 		camera.make_current()
 
+func set_touch_input(direction: Vector2) -> void:
+	touch_input = direction
+
 func _physics_process(delta: float) -> void:
 	if combo_timer > 0:
 		combo_timer -= delta
