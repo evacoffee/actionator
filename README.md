@@ -31,7 +31,7 @@ esc - pause
 # development
 1.) clone this repo
 ```sh
-git clone https://github.com/https://github.com/evacoffee/actionator.git
+git clone https://github.com/evacoffee/actionator.git
 ```
 
 
